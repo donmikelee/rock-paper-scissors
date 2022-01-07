@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/index.js" defer></script>
-    <title>Document</title>
   </head>
   <body>
-    <h1>Header</h1>
+    <div id="app">
+      <div class="container">
+        <header>
+          <div class="header">
+            <div class="selections">
+              <ul>
+                <li>rock</li>
+                <li>paper</li>
+                <li>scissors</li>
+              </ul>
+            </div>
+            <div class="score">
+              <p>score</p>
+              <div id="score">1</div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="selections__player">
+            <ul>
+              <li id="scissors">
+                <button>
+                  <img src="../images/icon-scissors.svg" alt="scissors" />
+                </button>
+              </li>
+              <span></span>
+              <li id="rock">
+                <button>
+                  <img src="../images/icon-rock.svg" alt="rock" />
+                </button>
+              </li>
+              <li id="paper">
+                <button>
+                  <img src="../images/icon-paper.svg" alt="paper" />
+                </button>
+              </li>
+            </ul>
+            <div class="triangle"></div>
+          </div>
+        </main>
+        <footer>
+          <div class="rules"><button>rules</button></div>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
