@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Rock, Paper, Scissors</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,10 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./js/index.js" defer></script>
+    <script type="module" src="./js/index.js" defer></script>
   </head>
   <body>
     <div id="app">
+      <div class="container__overlay"></div>
       <div class="container">
         <header>
           <div class="header">
@@ -33,18 +34,18 @@
         <main>
           <div class="selections__player">
             <ul>
-              <li id="scissors">
+              <li class="weapon" id="scissors">
                 <button>
                   <img src="../images/icon-scissors.svg" alt="scissors" />
                 </button>
               </li>
               <span></span>
-              <li id="rock">
+              <li class="weapon" id="rock">
                 <button>
                   <img src="../images/icon-rock.svg" alt="rock" />
                 </button>
               </li>
-              <li id="paper">
+              <li class="weapon" id="paper">
                 <button>
                   <img src="../images/icon-paper.svg" alt="paper" />
                 </button>
@@ -52,9 +53,24 @@
             </ul>
             <div class="triangle"></div>
           </div>
+          <div class="rules">
+            <h3>rules</h3>
+            <div class="icon-x">
+              <img
+                class="times-icon"
+                src="../images/times-solid.svg"
+                alt="times-solid"
+              />
+            </div>
+            <img
+              class="image-rules"
+              src="../images/image-rules.svg"
+              alt="image-rules"
+            />
+          </div>
         </main>
         <footer>
-          <div class="rules"><button>rules</button></div>
+          <div class="button-rules"><button>rules</button></div>
         </footer>
       </div>
     </div>
