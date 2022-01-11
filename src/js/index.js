@@ -7,6 +7,13 @@ const rules = document.querySelector('.rules');
 const overlay = document.querySelector('.container__overlay');
 
 const weapons = document.querySelectorAll('.weapon');
+const weapon_title = document.querySelector('.selection__name');
+
+const observer = new ResizeObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+  });
+});
 
 x_Button.onclick = () => {
   rules.classList.remove('active');
@@ -18,4 +25,15 @@ buttonRules.onclick = () => {
   overlay.classList.toggle('active');
 };
 
-console.log('Pokaż mi to w konsoli');
+weapons.forEach((weapon) => {
+  observer.observe(weapon);
+
+  weapon.onclick = () => {
+    weapon.classList.toggle('clicked');
+    console.log(weapon.id);
+  };
+
+  weapon.addEventListener('mouseenter', () => {
+    weapon_title.innerText = `${weapon.id}`;
+  });
+});

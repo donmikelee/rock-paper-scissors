@@ -92,6 +92,11 @@ body {
 
     main {
         .selections__player {
+            .selection__name {
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+            }
             ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -211,6 +216,11 @@ body {
             .icon-x {
                 flex-basis: 50%;
                 text-align: end;
+                opacity: 0.9;
+
+                &:hover {
+                    opacity: 1;
+                }
 
                 img {
                     cursor: pointer;
