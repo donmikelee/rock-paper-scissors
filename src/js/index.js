@@ -9,11 +9,11 @@ const overlay = document.querySelector(".container__overlay");
 const weapons = document.querySelectorAll(".weapon");
 const weapon_title = document.querySelector(".selection__name");
 
-const observer = new ResizeObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-  });
-});
+// const observer = new ResizeObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// });
 
 x_Button.onclick = () => {
   rules.classList.remove("active");
@@ -26,7 +26,7 @@ buttonRules.onclick = () => {
 };
 
 weapons.forEach((weapon) => {
-  observer.observe(weapon);
+  // observer.observe(weapon);
 
   weapon.onclick = () => {
     weapon.classList.add("clicked");
