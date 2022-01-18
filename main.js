@@ -1,4 +1,4 @@
-import "../scss/main.scss";
+import "./style.scss";
 
 const buttonRules = document.querySelector(".button-rules");
 const x_Button = document.querySelector(".times-icon");
@@ -36,8 +36,4 @@ weapons.forEach((weapon) => {
   weapon.addEventListener("mouseenter", () => {
     weapon_title.innerText = `${weapon.id}`;
   });
-});
-
-window.addEventListener("load", (e) => {
-  console.log(e, "Kotek");
 });
