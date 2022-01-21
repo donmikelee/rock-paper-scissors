@@ -1,10 +1,11 @@
 import { gsap } from "gsap/all";
-import { weapons, weaponCPU } from "./main";
+import { weaponCPU } from "./main";
 
 const scissors = document.getElementById("scissors");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("9paper");
 const triangle = document.querySelector(".triangle");
+const ul = document.querySelector(".weapons");
 
 export default scissors.onclick = () => {
   gsap.to("#scissors", {
@@ -42,4 +43,10 @@ export default scissors.onclick = () => {
     duration: 0.5,
     opacity: 0,
   });
+
+  setTimeout(() => {
+    ul.appendChild(weaponCPU);
+
+    console.log("Dodano dziecko");
+  }, 5000);
 };

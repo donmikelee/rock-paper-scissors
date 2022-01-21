@@ -1,5 +1,4 @@
 import "./style.scss";
-import animations from "./gsap";
 
 const buttonRules = document.querySelector(".button-rules");
 const x_Button = document.querySelector(".times-icon");
@@ -10,7 +9,7 @@ const overlay = document.querySelector(".container__overlay");
 export const weapons = document.querySelectorAll(".weapon");
 const weapon_title = document.querySelector(".selection__name");
 
-export let weaponCPU = "Kotek";
+export let weaponCPU = "";
 
 x_Button.onclick = () => {
   rules.classList.remove("active");
@@ -34,13 +33,13 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// const getWeaponCPU = () => {
-//   const getNumber = getRandomIntInclusive(0, 2);
-//   weaponCPU = weapons[getNumber];
+const getWeaponCPU = () => {
+  const getNumber = getRandomIntInclusive(0, 2);
+  weaponCPU = weapons[getNumber];
 
-//   console.log(weaponCPU);
-// };
+  console.log(weaponCPU);
+};
 
-// window.onload = () => {
-//   getWeaponCPU();
-// };
+window.onload = () => {
+  getWeaponCPU();
+};
