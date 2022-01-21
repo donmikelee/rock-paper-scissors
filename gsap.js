@@ -7,6 +7,16 @@ const paper = document.getElementById("9paper");
 const triangle = document.querySelector(".triangle");
 const ul = document.querySelector(".weapons");
 
+let newWeapon = "";
+
+const createCPUweapon = setTimeout(() => {
+  const newWeapon = weaponCPU.cloneNode(true);
+
+  console.log(newWeapon);
+
+  return newWeapon;
+}, 2000);
+
 export default scissors.onclick = () => {
   gsap.to("#scissors", {
     duration: 0.5,
@@ -44,9 +54,6 @@ export default scissors.onclick = () => {
     opacity: 0,
   });
 
-  setTimeout(() => {
-    ul.appendChild(weaponCPU);
-
-    console.log("Dodano dziecko");
-  }, 5000);
+  console.log(newWeapon);
+  ul.appendChild(newWeapon);
 };
