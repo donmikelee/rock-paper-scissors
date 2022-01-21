@@ -15,7 +15,7 @@ const createCPUweapon = setTimeout(() => {
   console.log(newWeapon);
 
   return newWeapon;
-}, 2000);
+}, 100);
 
 export default scissors.onclick = () => {
   gsap.to("#scissors", {
