@@ -10,7 +10,7 @@ const ul = document.querySelector(".weapons");
 let newWeapon = "";
 
 const createCPUweapon = setTimeout(() => {
-  const newWeapon = weaponCPU.cloneNode(true);
+  newWeapon = weaponCPU.cloneNode(true);
 
   console.log(newWeapon);
 
